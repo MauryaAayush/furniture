@@ -1,4 +1,3 @@
-
 List r1 = [
   {
     'img' : 'assets/images/chair.png',
