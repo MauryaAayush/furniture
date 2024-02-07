@@ -504,7 +504,7 @@ Widget CategoriesBox(String text, Icon icons) => Padding(
       CircleAvatar(
           backgroundColor: const Color(0xFF35383F),
           // backgroundImage: NetworkImage('https://shop.gkwretail.com/cdn/shop/products/1SeaterSofaAquaLivingRoomArmChairwithTaperedWood-1.jpg?v=1630501220&width=713'),
-          radius: 32,
+          radius: 31,
           child: icons),
       const SizedBox.square(dimension: 12),
       Text(
