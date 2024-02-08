@@ -39,7 +39,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         onTap: () {
                           Navigator.of(context).pushNamed('/home');
                         },
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           backgroundColor: Color(0xFF35383F),
                           child: Icon(
                             Icons.arrow_back_outlined,
