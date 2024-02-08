@@ -178,6 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Text(
                                 "Get discount for every\norder.only valid for today",
+                                softWrap: true,
                                 style: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     color: Colors.white70,
