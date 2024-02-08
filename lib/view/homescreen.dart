@@ -428,7 +428,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
-                // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r1.length,
@@ -525,101 +524,120 @@ Widget Products(BuildContext context, String img, String text, String rate,
   double height = MediaQuery.of(context).size.height;
   double width = MediaQuery.of(context).size.width;
 
-  return Container(
-    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-    // color : Colors.yellow,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-          height: height * 0.2,
-          width: width * 0.425,
-          decoration: const BoxDecoration(
-              color: Color(0xFF35383F),
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Stack(
-            children: [
-              Image.asset(img, fit: BoxFit.fitWidth),
-              const Positioned(
-                top: 10,
-                right: 15,
-                child: CircleAvatar(
-                  backgroundColor: Color(0xFF17181A),
-                  radius: 13,
-                  child: Icon(
-                    Icons.favorite,
-                    color: Colors.white,
-                    size: 15,
-                  ),
+  return InkWell(
+    onTap: () {
+      Navigator.of(context).pushNamed('/second');
+    },
+    child: Container(
+      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+
+      // here is the single container.
+      // color : Colors.yellow,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            child: Stack (children: [
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                height: height * 0.2,
+                width: width * 0.425,
+                decoration: const BoxDecoration(
+                    color: Color(0xFF35383F),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Stack(
+                  children: [
+                    Image.asset(img, fit: BoxFit.fitWidth),
+                    const Positioned(
+                      top: 10,
+                      right: 15,
+                      child: CircleAvatar(
+                        backgroundColor: Color(0xFF17181A),
+                        radius: 13,
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.white,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      text,
+                      style: GoogleFonts.poppins(
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    const SizedBox.square(
+                      dimension: 8,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star_half,
+                          color: Colors.white,
+                        ),
+                        const SizedBox.square(
+                          dimension: 10,
+                        ),
+                        Text('$rate   |',
+                            style: GoogleFonts.poppins(
+                              textStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                        const SizedBox.square(
+                          dimension: 10,
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          height: height * 0.025,
+                          width: width * 0.19,
+                          decoration: const BoxDecoration(
+                              color: Color(0xFF35383F),
+                              borderRadius: BorderRadius.all(Radius.circular(5))),
+                          child: Text(
+                            sale,
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox.square(dimension: 8),
+                    Text(price,
+                        style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ))),
+                  ],
                 ),
               ),
             ],
           ),
-        ),
-        const SizedBox.square(dimension: 10),
-        Text(
-          text,
-          style: GoogleFonts.poppins(
-            textStyle: const TextStyle(
-              color: Colors.white,
-              fontSize: 15.5,
-              fontWeight: FontWeight.w600,
-            ),
           ),
-        ),
-        const SizedBox.square(
-          dimension: 8,
-        ),
-        Row(
-          children: [
-            const Icon(
-              Icons.star_half,
-              color: Colors.white,
-            ),
-            const SizedBox.square(
-              dimension: 10,
-            ),
-            Text('$rate   |',
-                style: GoogleFonts.poppins(
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold),
-                )),
-            const SizedBox.square(
-              dimension: 10,
-            ),
-            Container(
-              alignment: Alignment.center,
-              height: height * 0.025,
-              width: width * 0.19,
-              decoration: const BoxDecoration(
-                  color: Color(0xFF35383F),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Text(
-                sale,
-                style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox.square(
-          dimension: 8,
-        ),
-        Text(price,
-            style: GoogleFonts.poppins(
-                textStyle: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                ))),
-      ],
+        ],
+      ),
     ),
   );
 }
