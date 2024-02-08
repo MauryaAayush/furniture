@@ -351,6 +351,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                   ],
                               ),
                               Container(
+                                padding:EdgeInsets.symmetric(horizontal: 40),
                                 height: height*0.068,
                                 width: width*0.59,
                                 decoration: BoxDecoration(
@@ -358,14 +359,24 @@ class _ProductScreenState extends State<ProductScreen> {
                                   borderRadius: BorderRadius.all(Radius.circular(30))
                                 ),
                                 child: Row(
-
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Icon(
+                                      Icons.shopping_bag_rounded,
+                                    ),
+                                    Text('Add to Cart',style: GoogleFonts.poppins(
+                                      textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700
+                                      )
+                                    ),)
+                                  ],
                                 ),
                               )
                             ],
                           ),
                         )
-
-
                       ],
                     ),
                   ),

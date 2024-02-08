@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/home' : (context) =>  const HomeScreen(),
         '/second' : (context) =>  const ProductScreen(),
+        '/third' : (context) =>  const (),
       },
     );
   }
