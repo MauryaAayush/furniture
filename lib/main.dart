@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:furniture/view/cartscreen.dart';
 import 'package:furniture/view/homescreen.dart';
 import 'package:furniture/view/productScreen.dart';
 import 'package:furniture/view/splashscreen.dart';
@@ -19,13 +20,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-       initialRoute: '/'
-           '',
+       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
         '/home' : (context) =>  const HomeScreen(),
         '/second' : (context) =>  const ProductScreen(),
-        '/third' : (context) =>  const (),
+        '/third' : (context) =>  const CartScreen(),
       },
     );
   }

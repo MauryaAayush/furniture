@@ -59,8 +59,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
 
-                      SizedBox(
-                        width: 110,
+                      SizedBox.square(
+                        dimension: 110,
                       ),
 
                       Icon(
@@ -68,14 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         size: 28,
                         color: Colors.white,
                       ),
-                      SizedBox(
-                        width: 1,
-                      ),
-                      Icon(
-                        Icons.favorite_border_rounded,
-                        size: 28,
-                        color: Colors.white,
-                      ),
+
+                       Icon(
+                         Icons.shopping_cart_outlined,
+                         size: 28,
+                         color: Colors.white,
+                       ),
                     ],
                   ),
                 ),
@@ -431,65 +429,100 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r1.length,
-                            (index) => Products(
-                            context,
-                            r1[index]['img'],
-                            r1[index]['text'],
-                            r1[index]['rate'],
-                            r1[index]['sale'],
-                            r1[index]['price'])))),
+                            (index) => InkWell(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/second',
+                                    arguments: r1[index]
+                                );
+                              },
+                              child: Products(
+                              context,
+                              r1[index]['img'],
+                              r1[index]['text'],
+                              r1[index]['rate'],
+                              r1[index]['sale'],
+                              r1[index]['price']),
+                            )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r2.length,
-                            (index) => Products(
-                            context,
-                            r2[index]['img'],
-                            r2[index]['text'],
-                            r2[index]['rate'],
-                            r2[index]['sale'],
-                            r2[index]['price'])))),
+                            (index) => InkWell(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/second',
+                                    arguments: r2[index]
+                                );
+                              },
+                              child: Products(
+                              context,
+                              r2[index]['img'],
+                              r2[index]['text'],
+                              r2[index]['rate'],
+                              r2[index]['sale'],
+                              r2[index]['price']),
+                            )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r3.length,
-                            (index) => Products(
-                            context,
-                            r3[index]['img'],
-                            r3[index]['text'],
-                            r3[index]['rate'],
-                            r3[index]['sale'],
-                            r3[index]['price'])))),
+                            (index) => InkWell(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/second',
+                                    arguments: r3[index]
+                                );
+                              },
+                              child: Products(
+                              context,
+                              r3[index]['img'],
+                              r3[index]['text'],
+                              r3[index]['rate'],
+                              r3[index]['sale'],
+                              r3[index]['price']),
+                            )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r4.length,
-                            (index) => Products(
-                            context,
-                            r4[index]['img'],
-                            r4[index]['text'],
-                            r4[index]['rate'],
-                            r4[index]['sale'],
-                            r4[index]['price'])))),
+                            (index) => InkWell(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/second',
+                                    arguments: r4[index]
+                                );
+                              },
+                              child: Products(
+                              context,
+                              r4[index]['img'],
+                              r4[index]['text'],
+                              r4[index]['rate'],
+                              r4[index]['sale'],
+                              r4[index]['price']),
+                            )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r5.length,
-                            (index) => Products(
-                            context,
-                            r5[index]['img'],
-                            r5[index]['text'],
-                            r5[index]['rate'],
-                            r5[index]['sale'],
-                            r5[index]['price'])))),
+                            (index) => InkWell(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/second',
+                                    arguments: r5[index]
+                                );
+                              },
+                              child: Products(
+                              context,
+                              r5[index]['img'],
+                              r5[index]['text'],
+                              r5[index]['rate'],
+                              r5[index]['sale'],
+                              r5[index]['price']),
+                            )))),
           ],
         ),
       ),
@@ -524,120 +557,115 @@ Widget Products(BuildContext context, String img, String text, String rate,
   double height = MediaQuery.of(context).size.height;
   double width = MediaQuery.of(context).size.width;
 
-  return InkWell(
-    onTap: () {
-      Navigator.of(context).pushNamed('/second');
-    },
-    child: Container(
-      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+  return Container(
+    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
 
-      // here is the single container.
-      // color : Colors.yellow,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            child: Stack (children: [
-              Container(
-                margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                height: height * 0.2,
-                width: width * 0.425,
-                decoration: const BoxDecoration(
-                    color: Color(0xFF35383F),
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Stack(
-                  children: [
-                    Image.asset(img, fit: BoxFit.fitWidth),
-                    const Positioned(
-                      top: 10,
-                      right: 15,
-                      child: CircleAvatar(
-                        backgroundColor: Color(0xFF17181A),
-                        radius: 13,
-                        child: Icon(
-                          Icons.favorite,
-                          color: Colors.white,
-                          size: 15,
-                        ),
+    // here is the single container.
+    // color : Colors.yellow,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          child: Stack (children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+              height: height * 0.2,
+              width: width * 0.425,
+              decoration: const BoxDecoration(
+                  color: Color(0xFF35383F),
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Stack(
+                children: [
+                  Image.asset(img, fit: BoxFit.fitWidth),
+                  const Positioned(
+                    top: 10,
+                    right: 15,
+                    child: CircleAvatar(
+                      backgroundColor: Color(0xFF17181A),
+                      radius: 13,
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                        size: 15,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+            ),
 
-              Container(
-                margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      text,
-                      style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w600,
-                        ),
+            Container(
+              margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    text,
+                    style: GoogleFonts.poppins(
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                    const SizedBox.square(
-                      dimension: 8,
-                    ),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.star_half,
-                          color: Colors.white,
-                        ),
-                        const SizedBox.square(
-                          dimension: 10,
-                        ),
-                        Text('$rate   |',
-                            style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.bold),
-                            )),
-                        const SizedBox.square(
-                          dimension: 10,
-                        ),
-                        Container(
-                          alignment: Alignment.center,
-                          height: height * 0.025,
-                          width: width * 0.19,
-                          decoration: const BoxDecoration(
-                              color: Color(0xFF35383F),
-                              borderRadius: BorderRadius.all(Radius.circular(5))),
-                          child: Text(
-                            sale,
-                            style: GoogleFonts.poppins(
-                                textStyle: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                )),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox.square(dimension: 8),
-                    Text(price,
-                        style: GoogleFonts.poppins(
+                  ),
+                  const SizedBox.square(
+                    dimension: 8,
+                  ),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star_half,
+                        color: Colors.white,
+                      ),
+                      const SizedBox.square(
+                        dimension: 10,
+                      ),
+                      Text('$rate   |',
+                          style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ))),
-                  ],
-                ),
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold),
+                          )),
+                      const SizedBox.square(
+                        dimension: 10,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        height: height * 0.025,
+                        width: width * 0.19,
+                        decoration: const BoxDecoration(
+                            color: Color(0xFF35383F),
+                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                        child: Text(
+                          sale,
+                          style: GoogleFonts.poppins(
+                              textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox.square(dimension: 8),
+                  Text(price,
+                      style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ))),
+                ],
               ),
-            ],
-          ),
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+        ),
+      ],
     ),
   );
 }
