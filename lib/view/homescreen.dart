@@ -69,11 +69,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                       ),
 
-                       Icon(
-                         Icons.shopping_cart_outlined,
-                         size: 28,
-                         color: Colors.white,
-                       ),
+                      Icon(
+                        Icons.shopping_cart_outlined,
+                        size: 28,
+                        color: Colors.white,
+                      ),
+
                     ],
                   ),
                 ),
