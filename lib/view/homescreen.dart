@@ -69,12 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                       ),
 
-                      Icon(
-                        Icons.shopping_cart_outlined,
-                        size: 28,
-                        color: Colors.white,
+                      InkWell(
+                        // onTap: () => Navigator.of(context).pushNamed('/third'),
+                        child: Icon(
+                          Icons.shopping_cart_outlined,
+                          size: 28,
+                          color: Colors.white,
+                        ),
                       ),
-
                     ],
                   ),
                 ),
