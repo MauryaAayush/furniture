@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:furniture/utils/cartProduct.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../utils/Product.dart';
+import 'lib/utils/cartProduct.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -352,28 +355,33 @@ class _ProductScreenState extends State<ProductScreen> {
                 
                               ],
                           ),
-                          Container(
-                            padding:EdgeInsets.symmetric(horizontal: 40),
-                            height: height*0.068,
-                            width: width*0.59,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(30))
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(
-                                  Icons.shopping_bag_rounded,
-                                ),
-                                Text('Add to Cart',style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w700
-                                  )
-                                ),)
-                              ],
+                          InkWell(
+                            onTap: () {
+                              cart.add(r1[index]);
+                            },
+                            child: Container(
+                              padding:EdgeInsets.symmetric(horizontal: 40),
+                              height: height*0.068,
+                              width: width*0.59,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(30))
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(
+                                    Icons.shopping_bag_rounded,
+                                  ),
+                                  Text('Add to Cart',style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w700
+                                    ),
+                                  ),)
+                                ],
+                              ),
                             ),
                           )
                         ],
@@ -391,3 +399,4 @@ class _ProductScreenState extends State<ProductScreen> {
 }
 
 int count = 0;
+int index = 0;
