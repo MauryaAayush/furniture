@@ -29,10 +29,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: const EdgeInsets.fromLTRB(15, 38, 10, 12),
                   height: height * 0.08,
                   width: width * 0.918,
-                  child: const Row(
+                  child:  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.blue,
                         radius: 23,
                         backgroundImage: AssetImage('assets/images/me.jpg'),
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
 
                       // here we have written the text of 👋 and AM
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -70,7 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
 
                       InkWell(
-                        // onTap: () => Navigator.of(context).pushNamed('/third'),
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/third');
+                        },
                         child: Icon(
                           Icons.shopping_cart_outlined,
                           size: 28,

@@ -24,27 +24,150 @@ import 'package:google_fonts/google_fonts.dart';
           body: SingleChildScrollView(
             child: Column(
               children: [
-              Container(
-                padding: EdgeInsets.fromLTRB(5, 25, 0, 0),
-                // color: Colors.yellow,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Image.asset('assets/images/logo.png',
-                    height:height*0.09,
-                    width: width*0.2,
-                    ),
-                    Text('My Cart',style: GoogleFonts.poppins(
-                      textStyle : TextStyle(
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
+                  // color: Colors.yellow,
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset('assets/images/logo.png',
+                      height:height*0.08,
+                      width: width*0.2,
+                      ),
+                      Text('My Cart',style: GoogleFonts.poppins(
+                        textStyle : TextStyle(
+                          color: Colors.white,
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                        )
+                      ),),
+                      Spacer(),
+                      Icon(
+                        Icons.search,
                         color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.w600,
-
-                      )
-                    ),)
-                  ],
+                        size: 35,
+                      ),
+                      SizedBox(width: 30,)
+                    ],
+                  ),
                 ),
-              )
+
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        height: height*0.18,
+                        width: width*0.9,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1F222A),
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                        ),
+                        child:  Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                              height: height*0.2,
+                              width: width*0.3,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF35383F),
+                                borderRadius: BorderRadius.all(Radius.circular(20))
+                              ),
+                              child: Image.asset('assets/images/chair.png',fit: BoxFit.cover,),
+                            ),
+                            Column(
+                              children: [
+                                Text('chair',style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 15,
+                                  )
+                                ),
+                                ),
+                                Text('\$120',style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 15,
+                                    )
+                                ),),
+                              ],
+                            ),
+
+                            SizedBox.square(dimension: 50,),
+                            Column(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               crossAxisAlignment: CrossAxisAlignment.end ,
+                              children: [
+                                Icon(
+                                  Icons.delete_outline,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
+
+
+                                // for increment and decrement
+                                Container(
+                                  height: height*0.045,
+                                  width: width*0.23,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF35383F),
+                                    borderRadius: BorderRadius.circular(50)
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {
+                                          if(count > 0)
+                                          {
+                                            setState(() {
+                                              count--;
+                                              // print(object)
+                                            });
+                                          }
+                                        },
+                                        child: Icon(
+                                          Icons.remove,
+                                          size: 20,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      // SizedBox.square(dimension: 20,),
+                                      Text('$count',style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600
+                                      )
+                                      ),
+                                      InkWell(
+                                        onTap: () {
+                                          count++;
+                                          setState(() {
+                                          });
+                                        },
+                                        child: Icon(
+                                          Icons.add,
+                                          size: 20,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+
+                              ],
+                            ),
+                          ],
+                        )
+
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
@@ -52,3 +175,4 @@ import 'package:google_fonts/google_fonts.dart';
 
       }
     }
+int count = 0;
