@@ -46,6 +46,10 @@ class _ProductScreenState extends State<ProductScreen> {
             left: 10,
             child: InkWell(
               onTap: () {
+                setState(() {
+                  count == 0;
+                });
+
                 Navigator.of(context).pushNamed('/home');
               },
               child: const CircleAvatar(
@@ -357,7 +361,8 @@ class _ProductScreenState extends State<ProductScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              cart.add(r1[index]);
+                              cart.add(productData);
+                              print('$productData');
                             },
                             child: Container(
                               padding:EdgeInsets.symmetric(horizontal: 40),
