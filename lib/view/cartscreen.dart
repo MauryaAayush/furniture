@@ -116,6 +116,7 @@ class _CartScreenState extends State<CartScreen> {
 
 
                   Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
                     height: height*0.12,
                     width: width*0.3,
                     // color: Colors.red,
@@ -133,6 +134,7 @@ class _CartScreenState extends State<CartScreen> {
                           '$text',
                           maxLines: 3,
                         ),
+
                         Text(
                           '$price',
                           style: GoogleFonts.poppins(
@@ -141,6 +143,53 @@ class _CartScreenState extends State<CartScreen> {
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
                               ),
+                          ),
+                        ),
+
+                        Container(
+                          // margin: EdgeInsets.symmetric(),
+                          height: height * 0.045,
+                          width: width * 0.23,
+                          decoration: BoxDecoration(
+                              color: Color(0xFF35383F),
+                              borderRadius: BorderRadius.circular(50)),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceEvenly,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  if (count > 0) {
+                                    setState(() {
+                                      count--;
+// print(object)
+                                    });
+                                  }
+                                },
+                                child: Icon(
+                                  Icons.remove,
+                                  size: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+// SizedBox.square(dimension: 20,),
+                              Text('$count',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600)),
+                              InkWell(
+                                onTap: () {
+                                  count++;
+                                  setState(() {});
+                                },
+                                child: Icon(
+                                  Icons.add,
+                                  size: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:furniture/view/cartscreen.dart';
 import 'package:furniture/view/homescreen.dart';
-import 'package:furniture/view/lib/welcomescreen.dart';
 import 'package:furniture/view/productScreen.dart';
 import 'package:furniture/view/splashscreen.dart';
+import 'package:furniture/view/welcomescreen.dart';
 
 
 void main() {

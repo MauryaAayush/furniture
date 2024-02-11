@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture/utils/cartProduct.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../utils/Product.dart';
-import 'lib/utils/cartProduct.dart';
+
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
