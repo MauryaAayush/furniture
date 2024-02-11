@@ -14,13 +14,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
+          context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
     });
 
     return Scaffold(
-      backgroundColor: Color(0xFF181A20),
+      backgroundColor: const Color(0xFF181A20),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
