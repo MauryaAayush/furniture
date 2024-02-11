@@ -1,7 +1,9 @@
-
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'homescreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,27 +15,37 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    });
+
     return Scaffold(
       backgroundColor: Color(0xFF181A20),
-      body: InkWell(
-        onTap: () {
-          Navigator.of(context).pushNamed('/home');
-        },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Funica',style: GoogleFonts.aladin(
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,fontWeight: FontWeight.w800,
-                    ) ))
-              ],
-            )
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 110),
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/home');
+              },
+              child: Row(
+                children: [
+                  Image(image: AssetImage('assets/images/logo.png')),
+                  Text('Funica',
+                      style: GoogleFonts.aladin(
+                          textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.w800,
+                      )))
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
