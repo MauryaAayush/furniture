@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 
        title: 'Furniture',
 
-       initialRoute: '/welcome',
+       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
         '/welcome': (context) => const WelcomeScreen(),
