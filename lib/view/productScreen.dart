@@ -47,7 +47,7 @@ class _ProductScreenState extends State<ProductScreen> {
             child: InkWell(
               onTap: () {
                 setState(() {
-                  count == 0;
+                  count = 0;
                 });
 
                 Navigator.of(context).pushNamed('/home');
@@ -62,6 +62,29 @@ class _ProductScreenState extends State<ProductScreen> {
               ),
             ),
           ),
+
+                Positioned(
+                  top: 30,
+                  right: 10,
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        count = 0;
+                      });
+
+                      Navigator.of(context).pushNamed('/third');
+                    },
+                    child: const CircleAvatar(
+                      backgroundColor: Color(0xFF35383F),
+                      child: Icon(
+                        Icons.shopping_cart_outlined,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
+                  ),
+                ),
+
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

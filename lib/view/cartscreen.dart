@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniture/view/productScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../utils/Product.dart';
 import '../utils/cartProduct.dart';
 
 void main() {
@@ -63,14 +62,17 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
 
-          Container(
-            child: Column(
-              children: List.generate(
-                  cart.length,
-                  (index) => CartProduct(cart[index]['img'],
-                      cart[index]['text'],
-                      cart[index]['rate'],
-                  )),
+          Expanded(
+            child: SingleChildScrollView(
+
+              child: Column(
+                children: List.generate(
+                    cart.length,
+                    (index) => CartProduct(cart[index]['img'],
+                        cart[index]['text'],
+                        cart[index]['price'],
+                    )),
+              ),
             ),
           )
         ],
@@ -78,14 +80,13 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  Widget CartProduct(String img,String text,String rate)
+  Widget CartProduct(String img,String text,String price)
   {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20,
-      vertical: 0),
+      padding: EdgeInsets.fromLTRB(20, 0, 0, 25),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -112,30 +113,38 @@ class _CartScreenState extends State<CartScreen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15,
-                            )),
-                        '$text',
-                      ),
-                      Text(
-                        '$rate',
-                        style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15,
-                            ),
 
+
+                  Container(
+                    height: height*0.12,
+                    width: width*0.3,
+                    // color: Colors.red,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                              )),
+                          '$text',
+                          maxLines: 3,
                         ),
-                      ),
-                    ],
+                        Text(
+                          '$price',
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                              ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox.square(
                     dimension: 10,
@@ -145,63 +154,21 @@ class _CartScreenState extends State<CartScreen> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       InkWell(
-                        onTap: () {},
-                        child: InkWell(
-                          onTap: () {},
-                          child: Icon(
-                            Icons.delete_outline,
-                            color: Colors.white,
-                            size: 30,
-                          ),
+                        onTap: () {
+                          cart.removeAt(index);
+                          setState(() {
+
+                          });
+                        },
+                        child: Icon(
+                          Icons.delete_outline,
+                          color: Colors.white,
+                          size: 30,
                         ),
                       ),
 
-// for increment and decrement
-                      Container(
-                        height: height * 0.045,
-                        width: width * 0.23,
-                        decoration: BoxDecoration(
-                            color: Color(0xFF35383F),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceEvenly,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                if (count > 0) {
-                                  setState(() {
-                                    count--;
-// print(object)
-                                  });
-                                }
-                              },
-                              child: Icon(
-                                Icons.remove,
-                                size: 20,
-                                color: Colors.white,
-                              ),
-                            ),
-// SizedBox.square(dimension: 20,),
-                            Text('$count',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600)),
-                            InkWell(
-                              onTap: () {
-                                count++;
-                                setState(() {});
-                              },
-                              child: Icon(
-                                Icons.add,
-                                size: 20,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+    // for increment and decrement
+
                     ],
                   ),
                 ],
@@ -215,4 +182,49 @@ class _CartScreenState extends State<CartScreen> {
 
 
 int count = 0;
-
+//
+// Container(
+// height: height * 0.045,
+// width: width * 0.23,
+// decoration: BoxDecoration(
+// color: Color(0xFF35383F),
+// borderRadius: BorderRadius.circular(50)),
+// child: Row(
+// mainAxisAlignment:
+// MainAxisAlignment.spaceEvenly,
+// children: [
+// InkWell(
+// onTap: () {
+// if (count > 0) {
+// setState(() {
+// count--;
+// // print(object)
+// });
+// }
+// },
+// child: Icon(
+// Icons.remove,
+// size: 20,
+// color: Colors.white,
+// ),
+// ),
+// // SizedBox.square(dimension: 20,),
+// Text('$count',
+// style: TextStyle(
+// color: Colors.white,
+// fontSize: 18,
+// fontWeight: FontWeight.w600)),
+// InkWell(
+// onTap: () {
+// count++;
+// setState(() {});
+// },
+// child: Icon(
+// Icons.add,
+// size: 20,
+// color: Colors.white,
+// ),
+// ),
+// ],
+// ),
+// )

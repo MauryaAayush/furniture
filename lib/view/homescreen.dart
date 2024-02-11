@@ -3,7 +3,6 @@ import 'package:furniture/utils/Product.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -29,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: const EdgeInsets.fromLTRB(15, 38, 10, 12),
                   height: height * 0.08,
                   width: width * 0.918,
-                  child:  Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const CircleAvatar(
@@ -210,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(
                     icon1.length,
-                        (index) => CategoriesBox(
+                    (index) => CategoriesBox(
                         icon1[index]['text'], icon1[index]['icons'])),
               ),
             ),
@@ -218,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
                   icon2.length,
-                      (index) => CategoriesBox(
+                  (index) => CategoriesBox(
                       icon2[index]['text'], icon2[index]['icons'])),
             ),
             Container(
@@ -232,19 +231,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Most Popular',
                     style: GoogleFonts.poppins(
                         textStyle: const TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        )),
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    )),
                   ),
                   Text(
                     'See All',
                     style: GoogleFonts.poppins(
                         textStyle: const TextStyle(
-                          fontSize: 17,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        )),
+                      fontSize: 17,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    )),
                   ),
                 ],
               ),
@@ -265,16 +264,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF35383F),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(color: const Color(0xFF35383F))),
                       child: Text(
                         'All',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -285,17 +284,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Sofa',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -306,7 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
@@ -328,17 +327,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Table',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -349,17 +348,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Kitchen',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -370,17 +369,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Lamp',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -391,17 +390,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Cupboard',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                     Container(
@@ -412,17 +411,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(30)),
+                              const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'vase',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            )),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        )),
                       ),
                     ),
                   ],
@@ -434,19 +433,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r1.length,
-                            (index) => InkWell(
+                        (index) => InkWell(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/second',
-                                    arguments: r1[index]
-                                );
+                                Navigator.of(context)
+                                    .pushNamed('/second', arguments: r1[index]);
                               },
                               child: Products(
-                              context,
-                              r1[index]['img'],
-                              r1[index]['text'],
-                              r1[index]['rate'],
-                              r1[index]['sale'],
-                              r1[index]['price']),
+                                  context,
+                                  r1[index]['img'],
+                                  r1[index]['text'],
+                                  r1[index]['rate'],
+                                  r1[index]['sale'],
+                                  r1[index]['price']),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -454,19 +452,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r2.length,
-                            (index) => InkWell(
+                        (index) => InkWell(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/second',
-                                    arguments: r2[index]
-                                );
+                                Navigator.of(context)
+                                    .pushNamed('/second', arguments: r2[index]);
                               },
                               child: Products(
-                              context,
-                              r2[index]['img'],
-                              r2[index]['text'],
-                              r2[index]['rate'],
-                              r2[index]['sale'],
-                              r2[index]['price']),
+                                  context,
+                                  r2[index]['img'],
+                                  r2[index]['text'],
+                                  r2[index]['rate'],
+                                  r2[index]['sale'],
+                                  r2[index]['price']),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -474,19 +471,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r3.length,
-                            (index) => InkWell(
+                        (index) => InkWell(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/second',
-                                    arguments: r3[index]
-                                );
+                                Navigator.of(context)
+                                    .pushNamed('/second', arguments: r3[index]);
                               },
                               child: Products(
-                              context,
-                              r3[index]['img'],
-                              r3[index]['text'],
-                              r3[index]['rate'],
-                              r3[index]['sale'],
-                              r3[index]['price']),
+                                  context,
+                                  r3[index]['img'],
+                                  r3[index]['text'],
+                                  r3[index]['rate'],
+                                  r3[index]['sale'],
+                                  r3[index]['price']),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -494,19 +490,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r4.length,
-                            (index) => InkWell(
+                        (index) => InkWell(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/second',
-                                    arguments: r4[index]
-                                );
+                                Navigator.of(context)
+                                    .pushNamed('/second', arguments: r4[index]);
                               },
                               child: Products(
-                              context,
-                              r4[index]['img'],
-                              r4[index]['text'],
-                              r4[index]['rate'],
-                              r4[index]['sale'],
-                              r4[index]['price']),
+                                  context,
+                                  r4[index]['img'],
+                                  r4[index]['text'],
+                                  r4[index]['rate'],
+                                  r4[index]['sale'],
+                                  r4[index]['price']),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -514,163 +509,174 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r5.length,
-                            (index) => InkWell(
+                        (index) => InkWell(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/second',
-                                    arguments: r5[index]
-                                );
+                                Navigator.of(context)
+                                    .pushNamed('/second', arguments: r5[index]);
                               },
                               child: Products(
-                              context,
-                              r5[index]['img'],
-                              r5[index]['text'],
-                              r5[index]['rate'],
-                              r5[index]['sale'],
-                              r5[index]['price']),
+                                  context,
+                                  r5[index]['img'],
+                                  r5[index]['text'],
+                                  r5[index]['rate'],
+                                  r5[index]['sale'],
+                                  r5[index]['price']),
                             )))),
           ],
         ),
       ),
     );
   }
-}
+  Widget Products(BuildContext context, String img, String text, String rate,
+      String sale, String price) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
 
-Widget CategoriesBox(String text, Icon icons) => Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: Column(
-    children: [
-      CircleAvatar(
-          backgroundColor: const Color(0xFF35383F),
-          // backgroundImage: NetworkImage('https://shop.gkwretail.com/cdn/shop/products/1SeaterSofaAquaLivingRoomArmChairwithTaperedWood-1.jpg?v=1630501220&width=713'),
-          radius: 31,
-          child: icons),
-      const SizedBox.square(dimension: 12),
-      Text(
-        text,
-        style: GoogleFonts.poppins(
-            textStyle: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-                fontSize: 15)),
-      )
-    ],
-  ),
-);
+    return Container(
+      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
 
-Widget Products(BuildContext context, String img, String text, String rate,
-    String sale, String price) {
-  double height = MediaQuery.of(context).size.height;
-  double width = MediaQuery.of(context).size.width;
-
-  return Container(
-    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-
-    // here is the single container.
-    // color : Colors.yellow,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          child: Stack (children: [
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-              height: height * 0.2,
-              width: width * 0.425,
-              decoration: const BoxDecoration(
-                  color: Color(0xFF35383F),
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              child: Stack(
-                children: [
-                  Image.asset(img, fit: BoxFit.fitWidth),
-                  const Positioned(
-                    top: 10,
-                    right: 15,
-                    child: CircleAvatar(
-                      backgroundColor: Color(0xFF17181A),
-                      radius: 13,
-                      child: Icon(
-                        Icons.favorite,
-                        color: Colors.white,
-                        size: 15,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    text,
-                    style: GoogleFonts.poppins(
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.5,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                  const SizedBox.square(
-                    dimension: 8,
-                  ),
-                  Row(
+      // here is the single container.
+      // color : Colors.yellow,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            child: Stack(
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                  height: height * 0.2,
+                  width: width * 0.425,
+                  decoration: const BoxDecoration(
+                      color: Color(0xFF35383F),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Stack(
                     children: [
-                      const Icon(
-                        Icons.star_half,
-                        color: Colors.white,
-                      ),
-                      const SizedBox.square(
-                        dimension: 10,
-                      ),
-                      Text('$rate   |',
-                          style: GoogleFonts.poppins(
-                            textStyle: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold),
-                          )),
-                      const SizedBox.square(
-                        dimension: 10,
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        height: height * 0.025,
-                        width: width * 0.19,
-                        decoration: const BoxDecoration(
-                            color: Color(0xFF35383F),
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
-                        child: Text(
-                          sale,
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                              )),
+                      Image.asset(img, fit: BoxFit.fitWidth),
+                      Positioned(
+                        top: 10,
+                        right: 15,
+                        child: CircleAvatar(
+                          backgroundColor: Color(0xFF17181A),
+                          radius: 13,
+                          child: InkWell(
+                            onTap: () {
+                              // Handle icon click here
+                              setState(() {
+                                // Change the color when clicked
+                                iconColor = iconColor == Colors.white ? Colors.red : Colors.white;
+                              });
+                            },
+                            child: Icon(
+                              Icons.favorite,
+                              color: iconColor,
+                              size: 15,
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox.square(dimension: 8),
-                  Text(price,
-                      style: GoogleFonts.poppins(
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        text,
+                        style: GoogleFonts.poppins(
                           textStyle: const TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 15.5,
                             fontWeight: FontWeight.w600,
-                          ))),
-                ],
-              ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox.square(
+                        dimension: 8,
+                      ),
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.star_half,
+                            color: Colors.white,
+                          ),
+                          const SizedBox.square(
+                            dimension: 10,
+                          ),
+                          Text('$rate   |',
+                              style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold),
+                              )),
+                          const SizedBox.square(
+                            dimension: 10,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            height: height * 0.025,
+                            width: width * 0.19,
+                            decoration: const BoxDecoration(
+                                color: Color(0xFF35383F),
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(5))),
+                            child: Text(
+                              sale,
+                              style: GoogleFonts.poppins(
+                                  textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox.square(dimension: 8),
+                      Text(price,
+                          style: GoogleFonts.poppins(
+                              textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                              ))),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-        ),
-      ],
-    ),
-  );
+          ),
+        ],
+      ),
+    );
+  }
 }
+
+Widget CategoriesBox(String text, Icon icons) => Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          CircleAvatar(
+              backgroundColor: const Color(0xFF35383F),
+              // backgroundImage: NetworkImage('https://shop.gkwretail.com/cdn/shop/products/1SeaterSofaAquaLivingRoomArmChairwithTaperedWood-1.jpg?v=1630501220&width=713'),
+              radius: 31,
+              child: icons),
+          const SizedBox.square(dimension: 12),
+          Text(
+            text,
+            style: GoogleFonts.poppins(
+                textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15)),
+          )
+        ],
+      ),
+    );
+
+
+Color iconColor = Colors.white;
