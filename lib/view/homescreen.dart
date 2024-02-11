@@ -3,6 +3,10 @@ import 'package:furniture/utils/Product.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../utils/cartProduct.dart';
+import '../utils/cartProduct.dart';
+
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -71,13 +75,40 @@ class _HomeScreenState extends State<HomeScreen> {
                       InkWell(
                         onTap: () {
                           Navigator.of(context).pushNamed('/third');
+                          setState(() {
+                          });
                         },
-                        child: Icon(
-                          Icons.shopping_cart_outlined,
-                          size: 28,
-                          color: Colors.white,
+                        child: Stack(
+                          children: [
+                            Icon(
+                              Icons.shopping_cart_outlined,
+                              size: 29,
+                              color: Colors.white,
+                            ),
+                            if (cart.isNotEmpty)  // Display count only if the cart is not empty
+                              Positioned(
+                                top: -5,
+                                right: 0,
+                                child: Container(
+                                  padding: EdgeInsets.all(4),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.red, // Adjust color as needed
+                                  ),
+                                  child: Text(
+                                    '${cart.length}',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
                         ),
                       ),
+
                     ],
                   ),
                 ),
@@ -444,7 +475,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   r1[index]['text'],
                                   r1[index]['rate'],
                                   r1[index]['sale'],
-                                  r1[index]['price']),
+                                  r1[index]['price'],
+                                  r1[index]['like'],
+                                    (newLike) {
+                                  setState(() {
+                                    r1[index]['like'] = newLike;
+                                  });
+                                },
+                              ),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -463,7 +501,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   r2[index]['text'],
                                   r2[index]['rate'],
                                   r2[index]['sale'],
-                                  r2[index]['price']),
+                                  r2[index]['price'],
+                                 r2[index]['like'],
+                                    (newLike) {
+                                  setState(() {
+                                    r2[index]['like'] = newLike;
+                                  });
+                                },
+                              ),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -482,7 +527,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   r3[index]['text'],
                                   r3[index]['rate'],
                                   r3[index]['sale'],
-                                  r3[index]['price']),
+                                  r3[index]['price'],
+                                 r3[index]['like'],
+                                    (newLike) {
+                                  setState(() {
+                                    r3[index]['like'] = newLike;
+                                  });
+                                },
+                              ),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -501,7 +553,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   r4[index]['text'],
                                   r4[index]['rate'],
                                   r4[index]['sale'],
-                                  r4[index]['price']),
+                                  r4[index]['price'],
+                                 r4[index]['like'],
+                                    (newLike) {
+                                  setState(() {
+                                    r4[index]['like'] = newLike;
+                                  });
+                                },
+                              ),
                             )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -515,20 +574,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .pushNamed('/second', arguments: r5[index]);
                               },
                               child: Products(
-                                  context,
-                                  r5[index]['img'],
-                                  r5[index]['text'],
-                                  r5[index]['rate'],
-                                  r5[index]['sale'],
-                                  r5[index]['price']),
-                            )))),
+                                context,
+                                r5[index]['img'],
+                                r5[index]['text'],
+                                r5[index]['rate'],
+                                r5[index]['sale'],
+                                r5[index]['price'],
+                                  r5[index]['like'],
+                                    (newLike) {
+                                  setState(() {
+                                    r1[index]['like'] = newLike;
+                                  });
+                                },
+                              ),
+
+                        )))),
           ],
         ),
       ),
     );
   }
   Widget Products(BuildContext context, String img, String text, String rate,
-      String sale, String price) {
+      String sale, String price, bool like,Function(bool) onLikeChanged,) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
@@ -561,15 +628,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           radius: 13,
                           child: InkWell(
                             onTap: () {
-                              // Handle icon click here
-                              setState(() {
-                                // Change the color when clicked
-                                iconColor = iconColor == Colors.white ? Colors.red : Colors.white;
-                              });
+                              onLikeChanged(!like);
                             },
                             child: Icon(
                               Icons.favorite,
-                              color: iconColor,
+                              color: like ? Colors.red : Colors.white,
                               size: 15,
                             ),
                           ),
@@ -637,7 +700,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       const SizedBox.square(dimension: 8),
-                      Text(price,
+                      Text('\$$price',
                           style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
                                 color: Colors.white,

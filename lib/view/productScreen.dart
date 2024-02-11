@@ -63,23 +63,41 @@ class _ProductScreenState extends State<ProductScreen> {
           ),
 
                 Positioned(
-                  top: 30,
-                  right: 10,
-                  child: InkWell(
+                  top: 35,
+                  right: 20,
+                  child:InkWell(
                     onTap: () {
-                      setState(() {
-                        count = 0;
-                      });
-
                       Navigator.of(context).pushNamed('/third');
+                      setState(() {});
                     },
-                    child: const CircleAvatar(
-                      backgroundColor: Color(0xFF35383F),
-                      child: Icon(
-                        Icons.shopping_cart_outlined,
-                        color: Colors.white,
-                        size: 30,
-                      ),
+                    child: Stack(
+                      children: [
+                        Icon(
+                          Icons.shopping_cart_outlined,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        if (cart.isNotEmpty)  // Display count only if the cart is not empty
+                          Positioned(
+                            top: -5,
+                            right: 0,
+                            child: Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.red, // Adjust color as needed
+                              ),
+                              child: Text(
+                                '${cart.length}',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                      ],
                     ),
                   ),
                 ),
@@ -140,9 +158,9 @@ class _ProductScreenState extends State<ProductScreen> {
     ),
           Expanded(
             child: Container(
+              margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
               padding: EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 20,
+                horizontal: 15
               ),
               height: height,
               width: width,
@@ -211,15 +229,11 @@ class _ProductScreenState extends State<ProductScreen> {
                         ),)
                       ],
                     ),
-                    SizedBox.square(dimension: 20),
-                    Container(
-                      height: height*0.001,
-                      width: width,
-                      decoration: BoxDecoration(
-                        color: Colors.white70
-                      ),
-                    ),
-                    SizedBox.square(dimension: 20),
+                    SizedBox.square(dimension: 15),
+
+                    Divider(thickness: 1),
+
+                    SizedBox.square(dimension: 15),
                     Text(
                       'Description',style: GoogleFonts.poppins(
                       textStyle: TextStyle(
@@ -345,15 +359,9 @@ class _ProductScreenState extends State<ProductScreen> {
                       ],
                     ),
                 
-                    SizedBox.square(dimension: 20),
-                
-                    Container(
-                      height: height*0.001,
-                      width: width,
-                      decoration: BoxDecoration(
-                          color: Colors.white70
-                      ),
-                    ),
+                    SizedBox.square(dimension: 15),
+
+                    Divider(thickness: 1),
                 
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 20),
@@ -371,7 +379,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                     fontWeight: FontWeight.w600,
                                   )
                                 ),),
-                                Text('${productData['price']}', style: GoogleFonts.poppins(
+                                Text('\$${productData['price']}', style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
                                     color: Colors.white,
                                     fontSize: 23,
