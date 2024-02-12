@@ -240,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(
                     icon1.length,
-                    (index) => CategoriesBox(
+                        (index) => CategoriesBox(
                         icon1[index]['text'], icon1[index]['icons'])),
               ),
             ),
@@ -248,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
                   icon2.length,
-                  (index) => CategoriesBox(
+                      (index) => CategoriesBox(
                       icon2[index]['text'], icon2[index]['icons'])),
             ),
             Container(
@@ -262,19 +262,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Most Popular',
                     style: GoogleFonts.poppins(
                         textStyle: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    )),
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        )),
                   ),
                   Text(
                     'See All',
                     style: GoogleFonts.poppins(
                         textStyle: const TextStyle(
-                      fontSize: 17,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    )),
+                          fontSize: 17,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        )),
                   ),
                 ],
               ),
@@ -295,16 +295,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF35383F),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(color: const Color(0xFF35383F))),
                       child: Text(
                         'All',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -315,17 +315,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Sofa',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -336,7 +336,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
@@ -358,17 +358,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Table',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -379,17 +379,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Kitchen',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -400,17 +400,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Lamp',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -421,17 +421,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'Cupboard',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                     Container(
@@ -442,17 +442,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           color: const Color(0xFF181A20),
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(30)),
+                          const BorderRadius.all(Radius.circular(30)),
                           border: Border.all(
                               color: const Color(0xFF35383F), width: 2)),
                       child: Text(
                         'vase',
                         style: GoogleFonts.poppins(
                             textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        )),
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            )),
                       ),
                     ),
                   ],
@@ -464,129 +464,129 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                     children: List.generate(
                         r1.length,
-                        (index) => InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed('/second', arguments: r1[index]);
-                              },
-                              child: Products(
-                                  context,
-                                  r1[index]['img'],
-                                  r1[index]['text'],
-                                  r1[index]['rate'],
-                                  r1[index]['sale'],
-                                  r1[index]['price'],
-                                  r1[index]['like'],
-                                    (newLike) {
-                                  setState(() {
-                                    r1[index]['like'] = newLike;
-                                  });
-                                },
-                              ),
-                            )))),
+                            (index) => InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/second', arguments: r1[index]);
+                          },
+                          child: Products(
+                            context,
+                            r1[index]['img'],
+                            r1[index]['text'],
+                            r1[index]['rate'],
+                            r1[index]['sale'],
+                            r1[index]['price'],
+                            r1[index]['like'],
+                                (newLike) {
+                              setState(() {
+                                r1[index]['like'] = newLike;
+                              });
+                            },
+                          ),
+                        )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r2.length,
-                        (index) => InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed('/second', arguments: r2[index]);
-                              },
-                              child: Products(
-                                  context,
-                                  r2[index]['img'],
-                                  r2[index]['text'],
-                                  r2[index]['rate'],
-                                  r2[index]['sale'],
-                                  r2[index]['price'],
-                                 r2[index]['like'],
-                                    (newLike) {
-                                  setState(() {
-                                    r2[index]['like'] = newLike;
-                                  });
-                                },
-                              ),
-                            )))),
+                            (index) => InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/second', arguments: r2[index]);
+                          },
+                          child: Products(
+                            context,
+                            r2[index]['img'],
+                            r2[index]['text'],
+                            r2[index]['rate'],
+                            r2[index]['sale'],
+                            r2[index]['price'],
+                            r2[index]['like'],
+                                (newLike) {
+                              setState(() {
+                                r2[index]['like'] = newLike;
+                              });
+                            },
+                          ),
+                        )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r3.length,
-                        (index) => InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed('/second', arguments: r3[index]);
-                              },
-                              child: Products(
-                                  context,
-                                  r3[index]['img'],
-                                  r3[index]['text'],
-                                  r3[index]['rate'],
-                                  r3[index]['sale'],
-                                  r3[index]['price'],
-                                 r3[index]['like'],
-                                    (newLike) {
-                                  setState(() {
-                                    r3[index]['like'] = newLike;
-                                  });
-                                },
-                              ),
-                            )))),
+                            (index) => InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/second', arguments: r3[index]);
+                          },
+                          child: Products(
+                            context,
+                            r3[index]['img'],
+                            r3[index]['text'],
+                            r3[index]['rate'],
+                            r3[index]['sale'],
+                            r3[index]['price'],
+                            r3[index]['like'],
+                                (newLike) {
+                              setState(() {
+                                r3[index]['like'] = newLike;
+                              });
+                            },
+                          ),
+                        )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r4.length,
-                        (index) => InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed('/second', arguments: r4[index]);
-                              },
-                              child: Products(
-                                  context,
-                                  r4[index]['img'],
-                                  r4[index]['text'],
-                                  r4[index]['rate'],
-                                  r4[index]['sale'],
-                                  r4[index]['price'],
-                                 r4[index]['like'],
-                                    (newLike) {
-                                  setState(() {
-                                    r4[index]['like'] = newLike;
-                                  });
-                                },
-                              ),
-                            )))),
+                            (index) => InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/second', arguments: r4[index]);
+                          },
+                          child: Products(
+                            context,
+                            r4[index]['img'],
+                            r4[index]['text'],
+                            r4[index]['rate'],
+                            r4[index]['sale'],
+                            r4[index]['price'],
+                            r4[index]['like'],
+                                (newLike) {
+                              setState(() {
+                                r4[index]['like'] = newLike;
+                              });
+                            },
+                          ),
+                        )))),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 // color: Colors.blue,
                 child: Row(
                     children: List.generate(
                         r5.length,
-                        (index) => InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed('/second', arguments: r5[index]);
-                              },
-                              child: Products(
-                                context,
-                                r5[index]['img'],
-                                r5[index]['text'],
-                                r5[index]['rate'],
-                                r5[index]['sale'],
-                                r5[index]['price'],
-                                  r5[index]['like'],
-                                    (newLike) {
-                                  setState(() {
-                                    r1[index]['like'] = newLike;
-                                  });
-                                },
-                              ),
+                            (index) => InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/second', arguments: r5[index]);
+                          },
+                          child: Products(
+                            context,
+                            r5[index]['img'],
+                            r5[index]['text'],
+                            r5[index]['rate'],
+                            r5[index]['sale'],
+                            r5[index]['price'],
+                            r5[index]['like'],
+                                (newLike) {
+                              setState(() {
+                                r1[index]['like'] = newLike;
+                              });
+                            },
+                          ),
 
                         )))),
           ],
@@ -632,7 +632,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                             child: Icon(
                               Icons.favorite,
-                              color: like ? Colors.red : Colors.white,
+                              color: like ? Colors.white : Colors.red,
                               size: 15,
                             ),
                           ),
@@ -720,26 +720,25 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 Widget CategoriesBox(String text, Icon icons) => Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          CircleAvatar(
-              backgroundColor: const Color(0xFF35383F),
-              // backgroundImage: NetworkImage('https://shop.gkwretail.com/cdn/shop/products/1SeaterSofaAquaLivingRoomArmChairwithTaperedWood-1.jpg?v=1630501220&width=713'),
-              radius: 31,
-              child: icons),
-          const SizedBox.square(dimension: 12),
-          Text(
-            text,
-            style: GoogleFonts.poppins(
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15)),
-          )
-        ],
-      ),
-    );
+  padding: const EdgeInsets.all(8.0),
+  child: Column(
+    children: [
+      CircleAvatar(
+          backgroundColor: const Color(0xFF35383F),
+          radius: 31,
+          child: icons),
+      const SizedBox.square(dimension: 12),
+      Text(
+        text,
+        style: GoogleFonts.poppins(
+            textStyle: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: 15)),
+      )
+    ],
+  ),
+);
 
 
 Color iconColor = Colors.white;

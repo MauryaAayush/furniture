@@ -143,7 +143,7 @@ class _CartScreenState extends State<CartScreen> {
                                         children: [
                                           InkWell(
                                             onTap: () {
-                                              if (cart[index]['quantity'] > 0) {
+                                              if (cart[index]['quantity'] > 1) {
                                                 setState(() {
                                                   cart[index]['quantity']--;
                                                 });
@@ -255,18 +255,19 @@ class _CartScreenState extends State<CartScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Icon(
-                            Icons.shopping_bag_rounded,
-                          ),
+
                           Text(
-                            'Add to Cart',
+                            'Checkout',
                             style: GoogleFonts.poppins(
                               textStyle: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
                                   fontWeight: FontWeight.w700),
                             ),
-                          )
+                          ),
+                          Icon(
+                            Icons.arrow_forward_rounded,
+                          ),
                         ],
                       ),
                     )

@@ -6,7 +6,7 @@ List r1 = [
     'sale' : '6,686 sold',
     'price' : '115.25',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   },
   {
     'img' : 'assets/images/chair2.png',
@@ -15,7 +15,7 @@ List r1 = [
     'sale' : '6,635 sold',
     'price' : '125.26',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   }
 ];
 
@@ -27,7 +27,7 @@ List r2 = [
     'sale' : '4,866 sold',
     'price' : '100.29',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   },
   {
     'img' : 'assets/images/table.png',
@@ -36,7 +36,7 @@ List r2 = [
     'sale' : '6,966 sold',
     'price' : '130.5',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   }
 ];
 
@@ -48,7 +48,7 @@ List r3 = [
     'sale' : '7,652 sold',
     'price' : '90',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   },
   {
     'img' : 'assets/images/sofa3.png',
@@ -57,7 +57,7 @@ List r3 = [
     'sale' : '9,826 sold',
     'price' : '80.26',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   }
 ];
 
@@ -69,7 +69,7 @@ List r4 = [
     'sale' : '10,006 sold',
     'price' : '15.2',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   },
   {
     'img' : 'assets/images/vase.png',
@@ -78,7 +78,7 @@ List r4 = [
     'sale' : '4,646 sold',
     'price' : '55.2',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   }
 ];
 
@@ -90,7 +90,7 @@ List r5 = [
     'sale' : '7,666 sold',
     'price' : '50.2',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   },
   {
     'img' : 'assets/images/vase3.png',
@@ -99,6 +99,6 @@ List r5 = [
     'sale' : '8,666 sold',
     'price' : '70.2',
     'quantity' : 1,
-    'like ' : true,
+    'like' : true,
   }
 ];
