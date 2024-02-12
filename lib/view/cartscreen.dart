@@ -219,33 +219,37 @@ class _CartScreenState extends State<CartScreen> {
                       topRight: Radius.circular(40))),
               alignment: Alignment.center,
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 30, horizontal: 25),
+                padding: EdgeInsets.symmetric(vertical: 28, horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Total price',
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          )),
-                        ),
-                        Text(
-                          '\$${calculateTotalPrice().toStringAsFixed(2)}',
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 23,
-                            fontWeight: FontWeight.w700,
-                          )),
-                        ),
-                      ],
+                    Container(
+                      // color: Colors.red,
+                      height: 45,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Total price',
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                            )),
+                          ),
+                          Text(
+                            '\$${calculateTotalPrice().toStringAsFixed(2)}',
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 23,
+                              fontWeight: FontWeight.w700,
+                            )),
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 40),

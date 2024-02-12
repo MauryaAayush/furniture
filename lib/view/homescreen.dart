@@ -62,13 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
 
-                      SizedBox.square(
-                        dimension: 110,
-                      ),
+                      SizedBox(width: 70,),
 
                       Icon(
                         Icons.notifications_none_outlined,
-                        size: 28,
+                        size: 26,
                         color: Colors.white,
                       ),
 
@@ -82,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Icon(
                               Icons.shopping_cart_outlined,
-                              size: 29,
+                              size: 26,
                               color: Colors.white,
                             ),
                             if (cart.isNotEmpty)  // Display count only if the cart is not empty
@@ -583,7 +581,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             r5[index]['like'],
                                 (newLike) {
                               setState(() {
-                                r1[index]['like'] = newLike;
+                                r5[index]['like'] = newLike;
                               });
                             },
                           ),
@@ -725,7 +723,7 @@ Widget CategoriesBox(String text, Icon icons) => Padding(
     children: [
       CircleAvatar(
           backgroundColor: const Color(0xFF35383F),
-          radius: 31,
+          radius: 28,
           child: icons),
       const SizedBox.square(dimension: 12),
       Text(

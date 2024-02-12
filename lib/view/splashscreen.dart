@@ -25,20 +25,22 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 110),
+            padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
             child: InkWell(
               onTap: () {
                 Navigator.of(context).pushNamed('/home');
               },
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(image: AssetImage('assets/images/logo.png')),
+                  Image(image: AssetImage('assets/images/logo.png'),height: 98),
                   Text('Funica',
                       style: GoogleFonts.aladin(
                           textStyle: const TextStyle(
                         color: Colors.white,
-                        fontSize: 40,
+                        fontSize: 43,
                         fontWeight: FontWeight.w800,
+                            letterSpacing: 5,
                       )))
                 ],
               ),
