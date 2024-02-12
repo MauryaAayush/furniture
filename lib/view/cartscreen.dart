@@ -189,7 +189,9 @@ class _CartScreenState extends State<CartScreen> {
                                   InkWell(
                                     onTap: () {
                                       cart.removeAt(index);
-                                      setState(() {});
+                                      setState(() {
+
+                                      });
                                     },
                                     child: Icon(
                                       Icons.delete_outline,

@@ -49,7 +49,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   count = 0;
                 });
 
-                Navigator.of(context).pushNamed('/home');
+                Navigator.of(context).pushReplacementNamed('/home');
               },
               child: const CircleAvatar(
                 backgroundColor: Color(0xFF35383F),
@@ -67,8 +67,10 @@ class _ProductScreenState extends State<ProductScreen> {
                   right: 20,
                   child:InkWell(
                     onTap: () {
-                      Navigator.of(context).pushNamed('/third');
-                      setState(() {});
+
+                      setState(() {
+                        Navigator.of(context).pushNamed('/third');
+                      });
                     },
                     child: Stack(
                       children: [
@@ -391,7 +393,10 @@ class _ProductScreenState extends State<ProductScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              cart.add(productData);
+                              setState(() {
+                                cart.add(productData);
+                              });
+
                               print('$productData');
                             },
                             child: Container(
