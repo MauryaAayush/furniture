@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' show Colors, Icon, Icons;
 
 List icon1 = [
   {
-    'icons' : Icon(Icons.chair, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.chair, color: Colors.white, size: 25,),
     'text' : "Sofa",
   },
   {
