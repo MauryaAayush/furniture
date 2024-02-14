@@ -38,7 +38,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFF6C6058),
+      backgroundColor: const Color(0xFF6C6058),
       body: Stack(
         children: [
           Positioned(
