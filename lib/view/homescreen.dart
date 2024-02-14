@@ -619,7 +619,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       top: 10,
                       right: 15,
                       child: CircleAvatar(
-                        backgroundColor: Color(0xFF17181A),
+                        backgroundColor: const Color(0xFF17181A),
                         radius: 13,
                         child: InkWell(
                           onTap: () {
