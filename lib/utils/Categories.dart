@@ -6,7 +6,7 @@ List icon1 = [
     'text' : "Sofa",
   },
   {
-    'icons' : Icon(Icons.chair_alt, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.chair_alt, color: Colors.white, size: 25,),
     'text' : "Chair",
   },
   {
