@@ -86,8 +86,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 top: -5,
                                 right: 0,
                                 child: Container(
-                                  padding: EdgeInsets.all(4),
-                                  decoration: BoxDecoration(
+                                  padding: const EdgeInsets.all(4),
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.red, // Adjust color as needed
                                   ),
