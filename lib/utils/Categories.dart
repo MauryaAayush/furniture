@@ -21,7 +21,7 @@ List icon1 = [
 ];
 List icon2 = [
   {
-    'icons' : Icon(Icons.light, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.light, color: Colors.white, size: 25,),
     'text' : "Lamp",
   },
   {
