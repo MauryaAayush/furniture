@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       const SizedBox(width: 70,),
 
-                      Icon(
+                      const Icon(
                         Icons.notifications_none_outlined,
                         size: 26,
                         color: Colors.white,
