@@ -637,7 +637,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
+                margin: const EdgeInsets.fromLTRB(4, 190, 0, 0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
