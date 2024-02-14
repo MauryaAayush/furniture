@@ -33,7 +33,7 @@ List icon2 = [
     'text' : "Vase",
   },
   {
-    'icons' : Icon(Icons.pending, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.pending, color: Colors.white, size: 25,),
     'text' : "Others",
   },
 
