@@ -603,111 +603,109 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            child: Stack(
-              children: [
-                Container(
-                  margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                  height: height * 0.2,
-                  width: width * 0.425,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF35383F),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                  child: Stack(
-                    children: [
-                      Image.asset(img, fit: BoxFit.fitWidth),
-                      Positioned(
-                        top: 10,
-                        right: 15,
-                        child: CircleAvatar(
-                          backgroundColor: Color(0xFF17181A),
-                          radius: 13,
-                          child: InkWell(
-                            onTap: () {
-                              onLikeChanged(!like);
-                            },
-                            child: Icon(
-                              Icons.favorite,
-                              color: like ? Colors.white : Colors.red,
-                              size: 15,
-                            ),
+          Stack(
+            children: [
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                height: height * 0.2,
+                width: width * 0.425,
+                decoration: const BoxDecoration(
+                    color: Color(0xFF35383F),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Stack(
+                  children: [
+                    Image.asset(img, fit: BoxFit.fitWidth),
+                    Positioned(
+                      top: 10,
+                      right: 15,
+                      child: CircleAvatar(
+                        backgroundColor: Color(0xFF17181A),
+                        radius: 13,
+                        child: InkWell(
+                          onTap: () {
+                            onLikeChanged(!like);
+                          },
+                          child: Icon(
+                            Icons.favorite,
+                            color: like ? Colors.white : Colors.red,
+                            size: 15,
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        text,
-                        style: GoogleFonts.poppins(
-                          textStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.5,
-                            fontWeight: FontWeight.w600,
-                          ),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(4, 190, 0, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      text,
+                      style: GoogleFonts.poppins(
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15.5,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const SizedBox.square(
-                        dimension: 8,
-                      ),
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.star_half,
-                            color: Colors.white,
-                          ),
-                          const SizedBox.square(
-                            dimension: 10,
-                          ),
-                          Text('$rate   |',
-                              style: GoogleFonts.poppins(
-                                textStyle: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                          const SizedBox.square(
-                            dimension: 10,
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            height: height * 0.025,
-                            width: width * 0.19,
-                            decoration: const BoxDecoration(
-                                color: Color(0xFF35383F),
-                                borderRadius:
-                                BorderRadius.all(Radius.circular(5))),
-                            child: Text(
-                              sale,
-                              style: GoogleFonts.poppins(
-                                  textStyle: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox.square(dimension: 8),
-                      Text('\$$price',
-                          style: GoogleFonts.poppins(
+                    ),
+                    const SizedBox.square(
+                      dimension: 8,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star_half,
+                          color: Colors.white,
+                        ),
+                        const SizedBox.square(
+                          dimension: 10,
+                        ),
+                        Text('$rate   |',
+                            style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ))),
-                    ],
-                  ),
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                        const SizedBox.square(
+                          dimension: 10,
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          height: height * 0.025,
+                          width: width * 0.19,
+                          decoration: const BoxDecoration(
+                              color: Color(0xFF35383F),
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(5))),
+                          child: Text(
+                            sale,
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox.square(dimension: 8),
+                    Text('\$$price',
+                        style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ))),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
