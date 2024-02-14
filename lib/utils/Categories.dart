@@ -25,7 +25,7 @@ List icon2 = [
     'text' : "Lamp",
   },
   {
-    'icons' : Icon(Icons.kitchen_outlined, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.kitchen_outlined, color: Colors.white, size: 25,),
     'text' : "Cupboard",
   },
   {
