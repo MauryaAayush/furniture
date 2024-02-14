@@ -10,11 +10,11 @@ List icon1 = [
     'text' : "Chair",
   },
   {
-    'icons' : Icon(Icons.table_restaurant_rounded, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.table_restaurant_rounded, color: Colors.white, size: 25,),
     'text' : "Table",
   },
   {
-    'icons' : Icon(Icons.kitchen_outlined, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.kitchen_outlined, color: Colors.white, size: 25,),
     'text' : "Kitchen",
   },
 
