@@ -54,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Positioned(
             top: height * 0.61,
             left: width * 0.07,
-            child: Text(
+            child: const Text(
               'Welcome to 👋',
               style: TextStyle(
                 color: Colors.white,
