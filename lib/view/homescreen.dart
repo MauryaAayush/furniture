@@ -2,7 +2,6 @@ import 'package:furniture/utils/Categories.dart';
 import 'package:furniture/utils/Product.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../utils/cartProduct.dart';
 
 
@@ -77,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         child: Stack(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.shopping_cart_outlined,
                               size: 26,
                               color: Colors.white,
