@@ -29,7 +29,7 @@ List icon2 = [
     'text' : "Cupboard",
   },
   {
-    'icons' : Icon(Icons.park, color: Colors.white, size: 25,),
+    'icons' : const Icon(Icons.park, color: Colors.white, size: 25,),
     'text' : "Vase",
   },
   {
