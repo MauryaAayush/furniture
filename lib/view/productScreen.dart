@@ -391,7 +391,6 @@ class _ProductScreenState extends State<ProductScreen> {
                               setState(() {
                                 cart.add(productData);
                               });
-
                               print('$productData');
                             },
                             child: Container(
