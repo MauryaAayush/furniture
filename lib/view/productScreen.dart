@@ -330,7 +330,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                      });
                                    }
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.remove,
                                   size: 20,
                                   color: Colors.white,
