@@ -267,7 +267,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         )
                     ),),
                     const SizedBox.square(dimension: 10),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                        CircleAvatar(
