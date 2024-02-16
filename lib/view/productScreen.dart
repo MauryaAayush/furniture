@@ -403,7 +403,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               padding:EdgeInsets.symmetric(horizontal: 40),
                               height: height*0.068,
                               width: width*0.59,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.all(Radius.circular(30))
                               ),
