@@ -382,7 +382,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                   )
                                 ),),
                                 Text('\$${productData['price']}', style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 23,
                                     fontWeight: FontWeight.w700,
