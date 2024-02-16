@@ -309,7 +309,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               color: Colors.white,
                               fontSize: 18,fontWeight: FontWeight.w600,
                             ) ),),
-                        SizedBox.square(dimension: 20),
+                        const SizedBox.square(dimension: 20),
                         Container(
                           height: height*0.055,
                           width: width*0.3,
