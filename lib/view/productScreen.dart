@@ -366,7 +366,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     const Divider(thickness: 1),
                 
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 20),
+                      padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
