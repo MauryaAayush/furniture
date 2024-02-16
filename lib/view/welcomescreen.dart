@@ -69,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             left: width * 0.08,
             child: Text('Funica',
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 80,
                     fontWeight: FontWeight.w800,
