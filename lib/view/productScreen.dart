@@ -375,7 +375,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Total price',style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white70,
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
