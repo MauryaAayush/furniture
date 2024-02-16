@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:furniture/view/welcomescreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -15,8 +14,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => const WelcomeScreen()));
     });
 
     return Scaffold(
@@ -34,14 +33,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Image(
-                      image: AssetImage('assets/images/logo.png'),height: 98),
+                      image: AssetImage('assets/images/logo.png'), height: 98),
                   Text('Funica',
                       style: GoogleFonts.aladin(
                           textStyle: const TextStyle(
                         color: Colors.white,
                         fontSize: 43,
                         fontWeight: FontWeight.w800,
-                            letterSpacing: 5,
+                        letterSpacing: 5,
                       )))
                 ],
               ),
