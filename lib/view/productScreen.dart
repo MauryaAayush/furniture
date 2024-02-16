@@ -238,17 +238,17 @@ class _ProductScreenState extends State<ProductScreen> {
                     const SizedBox.square(dimension: 15),
                     Text(
                       'Description',style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Colors.white,
                         fontSize:18,
                         fontWeight: FontWeight.w600,
                       )
                     ),),
-                    SizedBox.square(dimension: 10),
+                    const SizedBox.square(dimension: 10),
                     Text(
                       'Elevate your seating experience to new heights with our LuxeComfort Premium Chair. Meticulously crafted for the connoisseur of comfort and style, this chair seamlessly blends ergonomic design with exquisite aesthetics.',
                       style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                            color: Colors.white70,
                           fontSize: 13,
                           fontWeight: FontWeight.w500
@@ -257,10 +257,10 @@ class _ProductScreenState extends State<ProductScreen> {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox.square(dimension: 10),
+                    const SizedBox.square(dimension: 10),
                     Text(
                       'Color',style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
