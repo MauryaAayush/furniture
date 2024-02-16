@@ -266,7 +266,7 @@ class _ProductScreenState extends State<ProductScreen> {
                           fontWeight: FontWeight.w600,
                         )
                     ),),
-                    SizedBox.square(dimension: 10),
+                    const SizedBox.square(dimension: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
