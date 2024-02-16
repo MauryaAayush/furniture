@@ -363,7 +363,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 
                     const SizedBox.square(dimension: 15),
 
-                    Divider(thickness: 1),
+                    const Divider(thickness: 1),
                 
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 20),
