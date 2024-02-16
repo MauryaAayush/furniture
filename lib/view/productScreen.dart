@@ -235,7 +235,7 @@ class _ProductScreenState extends State<ProductScreen> {
 
                     const Divider(thickness: 1),
 
-                    SizedBox.square(dimension: 15),
+                    const SizedBox.square(dimension: 15),
                     Text(
                       'Description',style: GoogleFonts.poppins(
                       textStyle: TextStyle(
