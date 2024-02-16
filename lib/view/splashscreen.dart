@@ -33,7 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(image: AssetImage('assets/images/logo.png'),height: 98),
+                  const Image(
+                      image: AssetImage('assets/images/logo.png'),height: 98),
                   Text('Funica',
                       style: GoogleFonts.aladin(
                           textStyle: const TextStyle(
