@@ -129,7 +129,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   Container(
                     height: height*0.01,
                     width: width*0.03,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF1F222A),
                       shape: BoxShape.circle,
                     ),
