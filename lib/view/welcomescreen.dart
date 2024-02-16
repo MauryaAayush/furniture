@@ -84,7 +84,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Text(
                 'The best furniture e-commerce app of the \ncentury for your daily needs!',
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
