@@ -85,7 +85,7 @@ class _ProductScreenState extends State<ProductScreen> {
                             right: 0,
                             child: Container(
                               padding: const EdgeInsets.all(4),
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.red, // Adjust color as needed
                               ),
