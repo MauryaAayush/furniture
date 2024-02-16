@@ -74,7 +74,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     },
                     child: Stack(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.shopping_cart_outlined,
                           size: 30,
                           color: Colors.white,
