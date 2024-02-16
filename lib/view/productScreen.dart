@@ -410,7 +410,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.shopping_bag_rounded,
                                   ),
                                   Text('Add to Cart',style: GoogleFonts.poppins(
