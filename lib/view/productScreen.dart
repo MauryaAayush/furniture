@@ -160,7 +160,7 @@ class _ProductScreenState extends State<ProductScreen> {
     ),
           Expanded(
             child: Container(
-              margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
               padding: EdgeInsets.symmetric(
                 horizontal: 15
               ),
