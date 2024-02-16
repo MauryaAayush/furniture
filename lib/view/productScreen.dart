@@ -349,7 +349,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                   setState(() {
                                   });
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.add,
                                   size: 20,
                                   color: Colors.white,
