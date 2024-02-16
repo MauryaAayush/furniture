@@ -20,14 +20,14 @@ class _ProductScreenState extends State<ProductScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFF181A20),
+      backgroundColor: const Color(0xFF181A20),
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: 20),
             height: height * 0.45,
             width: width,
-            decoration: BoxDecoration(color: Color(0xFF35383F)),
+            decoration: const BoxDecoration(color: Color(0xFF35383F)),
             child: Stack(
               children: [
             Positioned(
