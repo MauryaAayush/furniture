@@ -193,7 +193,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         ),
                       ],
                     ),
-                    SizedBox.square(dimension: 10),
+                    const SizedBox.square(dimension: 10),
                     Row(
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
