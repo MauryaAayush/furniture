@@ -223,7 +223,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         const SizedBox.square(dimension: 8),
                 
                         Text(productData['rate'],style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             color: Colors.white70,
                             fontWeight: FontWeight.w700,
                             fontSize: 15,
