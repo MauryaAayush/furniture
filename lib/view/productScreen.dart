@@ -300,7 +300,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         ),
                       ],
                     ),
-                    SizedBox.square(dimension: 20),
+                    const SizedBox.square(dimension: 20),
                 
                     Row(
                       children: [
