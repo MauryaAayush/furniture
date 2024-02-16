@@ -400,7 +400,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               print('$productData');
                             },
                             child: Container(
-                              padding:EdgeInsets.symmetric(horizontal: 40),
+                              padding:const EdgeInsets.symmetric(horizontal: 40),
                               height: height*0.068,
                               width: width*0.59,
                               decoration: const BoxDecoration(
