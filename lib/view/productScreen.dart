@@ -215,7 +215,7 @@ class _ProductScreenState extends State<ProductScreen> {
                           ),
                         ),
                         const SizedBox.square(dimension: 15,),
-                        Icon(
+                        const Icon(
                           Icons.star_half,
                           color: Colors.white,
                 
