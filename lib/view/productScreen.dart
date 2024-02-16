@@ -231,7 +231,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         ),)
                       ],
                     ),
-                    SizedBox.square(dimension: 15),
+                    const SizedBox.square(dimension: 15),
 
                     Divider(thickness: 1),
 
