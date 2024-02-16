@@ -161,12 +161,12 @@ class _ProductScreenState extends State<ProductScreen> {
           Expanded(
             child: Container(
               margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 15
               ),
               height: height,
               width: width,
-              decoration: BoxDecoration (
+              decoration: const BoxDecoration (
                 // color: Colors.blue
               ),
               child: SingleChildScrollView(
@@ -178,7 +178,7 @@ class _ProductScreenState extends State<ProductScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(productData['text'],style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.w600,
@@ -186,7 +186,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         ),),
                 
                 
-                        Icon(
+                        const Icon(
                           Icons.favorite_border_rounded,
                           color: Colors.white,
                           size: 30,
