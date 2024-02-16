@@ -31,7 +31,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
 
     double height = MediaQuery.of(context).size.height;
