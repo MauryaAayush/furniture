@@ -211,7 +211,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
           Container(
-              height: height * 0.13,
+              height: height * 0.15,
               decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.only(
@@ -225,7 +225,8 @@ class _CartScreenState extends State<CartScreen> {
                   children: [
                     Container(
                       // color: Colors.red,
-                      height: 45,
+                      height: 50,
+                      width: 100,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,

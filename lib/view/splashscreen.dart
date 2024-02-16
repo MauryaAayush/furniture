@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+            padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
             child: InkWell(
               onTap: () {
                 Navigator.of(context).pushNamed('/home');
