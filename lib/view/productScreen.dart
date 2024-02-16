@@ -414,7 +414,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                     Icons.shopping_bag_rounded,
                                   ),
                                   Text('Add to Cart',style: GoogleFonts.poppins(
-                                    textStyle: TextStyle(
+                                    textStyle: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700
